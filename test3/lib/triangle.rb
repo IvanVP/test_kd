@@ -2,9 +2,9 @@ class Triangle < Array
 
   def solution
     a = self.sort
+    return 0 if a[0] < 0 # only positive
 
     (a.size-1).downto(0) do |i|
-      return 0 if a[i] < 0 # only positive
       s, e = 0, i-1
 
       while s<e do
